@@ -24,12 +24,8 @@ mixin _$TiposSanguineos {
   String get nomeTipoSang => throw _privateConstructorUsedError;
   int get totalDisponivel => throw _privateConstructorUsedError;
 
-  /// Serializes this TiposSanguineos to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of TiposSanguineos
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TiposSanguineosCopyWith<TiposSanguineos> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,8 +49,6 @@ class _$TiposSanguineosCopyWithImpl<$Res, $Val extends TiposSanguineos>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TiposSanguineos
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,8 +92,6 @@ class __$$TiposSanguineosImplCopyWithImpl<$Res>
       _$TiposSanguineosImpl _value, $Res Function(_$TiposSanguineosImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TiposSanguineos
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,14 +152,12 @@ class _$TiposSanguineosImpl implements _TiposSanguineos {
                 other.totalDisponivel == totalDisponivel));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, codTipoSanguineo, nomeTipoSang, totalDisponivel);
 
-  /// Create a copy of TiposSanguineos
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TiposSanguineosImplCopyWith<_$TiposSanguineosImpl> get copyWith =>
@@ -197,11 +187,8 @@ abstract class _TiposSanguineos implements TiposSanguineos {
   String get nomeTipoSang;
   @override
   int get totalDisponivel;
-
-  /// Create a copy of TiposSanguineos
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TiposSanguineosImplCopyWith<_$TiposSanguineosImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

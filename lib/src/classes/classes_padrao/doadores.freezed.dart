@@ -28,12 +28,8 @@ mixin _$Doadores {
   int get codTipoSanguineo => throw _privateConstructorUsedError;
   String get endereco => throw _privateConstructorUsedError;
 
-  /// Serializes this Doadores to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Doadores
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DoadoresCopyWith<Doadores> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -63,8 +59,6 @@ class _$DoadoresCopyWithImpl<$Res, $Val extends Doadores>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Doadores
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,8 +129,6 @@ class __$$DoadoresImplCopyWithImpl<$Res>
       _$DoadoresImpl _value, $Res Function(_$DoadoresImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Doadores
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -235,14 +227,12 @@ class _$DoadoresImpl implements _Doadores {
                 other.endereco == endereco));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, codDoador, nome, sobrenome, cpf,
       telefone, codTipoSanguineo, endereco);
 
-  /// Create a copy of Doadores
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DoadoresImplCopyWith<_$DoadoresImpl> get copyWith =>
@@ -283,11 +273,8 @@ abstract class _Doadores implements Doadores {
   int get codTipoSanguineo;
   @override
   String get endereco;
-
-  /// Create a copy of Doadores
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DoadoresImplCopyWith<_$DoadoresImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

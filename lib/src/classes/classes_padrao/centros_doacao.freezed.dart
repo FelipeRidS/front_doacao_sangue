@@ -24,12 +24,8 @@ mixin _$CentrosDeDoacao {
   String get nomeLocal => throw _privateConstructorUsedError;
   String get endereco => throw _privateConstructorUsedError;
 
-  /// Serializes this CentrosDeDoacao to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CentrosDeDoacao
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CentrosDeDoacaoCopyWith<CentrosDeDoacao> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,8 +49,6 @@ class _$CentrosDeDoacaoCopyWithImpl<$Res, $Val extends CentrosDeDoacao>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CentrosDeDoacao
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,8 +92,6 @@ class __$$CentrosDeDoacaoImplCopyWithImpl<$Res>
       _$CentrosDeDoacaoImpl _value, $Res Function(_$CentrosDeDoacaoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CentrosDeDoacao
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,14 +152,12 @@ class _$CentrosDeDoacaoImpl implements _CentrosDeDoacao {
                 other.endereco == endereco));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, codCentroDoacao, nomeLocal, endereco);
 
-  /// Create a copy of CentrosDeDoacao
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CentrosDeDoacaoImplCopyWith<_$CentrosDeDoacaoImpl> get copyWith =>
@@ -197,11 +187,8 @@ abstract class _CentrosDeDoacao implements CentrosDeDoacao {
   String get nomeLocal;
   @override
   String get endereco;
-
-  /// Create a copy of CentrosDeDoacao
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CentrosDeDoacaoImplCopyWith<_$CentrosDeDoacaoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

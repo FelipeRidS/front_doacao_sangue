@@ -26,12 +26,8 @@ mixin _$TiposSangMaisRetirados {
   int get qtdRegistros => throw _privateConstructorUsedError;
   String get qtdMls => throw _privateConstructorUsedError;
 
-  /// Serializes this TiposSangMaisRetirados to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of TiposSangMaisRetirados
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TiposSangMaisRetiradosCopyWith<TiposSangMaisRetirados> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,8 +56,6 @@ class _$TiposSangMaisRetiradosCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TiposSangMaisRetirados
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -117,8 +111,6 @@ class __$$TiposSangMaisRetiradosImplCopyWithImpl<$Res>
       $Res Function(_$TiposSangMaisRetiradosImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TiposSangMaisRetirados
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -188,14 +180,12 @@ class _$TiposSangMaisRetiradosImpl implements _TiposSangMaisRetirados {
             (identical(other.qtdMls, qtdMls) || other.qtdMls == qtdMls));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, nomeTipoSang, totalDisponivel, qtdRegistros, qtdMls);
 
-  /// Create a copy of TiposSangMaisRetirados
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TiposSangMaisRetiradosImplCopyWith<_$TiposSangMaisRetiradosImpl>
@@ -228,11 +218,8 @@ abstract class _TiposSangMaisRetirados implements TiposSangMaisRetirados {
   int get qtdRegistros;
   @override
   String get qtdMls;
-
-  /// Create a copy of TiposSangMaisRetirados
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TiposSangMaisRetiradosImplCopyWith<_$TiposSangMaisRetiradosImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

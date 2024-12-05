@@ -1,19 +1,20 @@
 import 'package:front_doacao_sangue/main.dart';
 import 'package:front_doacao_sangue/src/classes/classes_padrao/retiradas_de_sangue.dart';
+import 'package:mongo_dart/mongo_dart.dart';
 
 abstract class RetiradasDeSangueRest {
 
   static Future<List<RetiradasDeSangue>> getRetiradasDeSangue()  async {
-    db.open();
-    final List<Map<String, dynamic>> retiradasSangue = [];
-    await db.collection('retiradas_sangue').find().forEach(retiradasSangue.add);
+    await db.open(tlsAllowInvalidCertificates: true);
+    final List<Map<String, dynamic>> retiradasSangue = await db.collection('RetiradasSangue').find().toList();
+    final a = retiradasSangue.map((e) => {...e, 'codRetiradaSangue': e['_id']});
     db.close();
-    return retiradasSangue.map((e) => RetiradasDeSangue.fromJson(e)).toList();
+    return a.map((e) => RetiradasDeSangue.fromJson(e)).toList();
   }
 
   static Future<RetiradasDeSangue> getRetiradaDeSangueById(int id)  async {
-    db.open();
-    final Map<String, dynamic> funcionario = await db.collection('retiradas_sangue').findOne(id) ?? {};
+    await db.open(tlsAllowInvalidCertificates: true);
+    final Map<String, dynamic> funcionario = await db.collection('RetiradasSangue').findOne(where.eq('_id', id)) ?? {};
     db.close();
     return RetiradasDeSangue.fromJson(funcionario);
   }
@@ -21,8 +22,8 @@ abstract class RetiradasDeSangueRest {
 
   static Future<dynamic> createRetiradaDeSangue(
       Map<String, dynamic> funcionario)  async {
-    db.open();
-    await db.collection('retiradas_sangue').insert(funcionario);
+    await db.open(tlsAllowInvalidCertificates: true);
+    await db.collection('RetiradasSangue').insert(funcionario);
     db.close();
   }
 
@@ -31,16 +32,16 @@ abstract class RetiradasDeSangueRest {
   static Future<dynamic> updateRetiradaDeSangue(
       {required int id,
       required Map<String, dynamic> retiradaDeSangue})  async {
-    db.open();
-    await db.collection('retiradas_sangue').updateOne(id, retiradaDeSangue);
+    await db.open(tlsAllowInvalidCertificates: true);
+    await db.collection('RetiradasSangue').updateOne(where.eq('_id', id), retiradaDeSangue);
     db.close();
   }
 
 
 
   static Future<dynamic> deleteRetiradaDeSangue(int id)  async {
-    db.open();
-    await db.collection('retiradas_sangue').deleteOne(id);
+    await db.open(tlsAllowInvalidCertificates: true);
+    await db.collection('RetiradasSangue').deleteOne(where.eq('_id', id));
     db.close();
   }
 

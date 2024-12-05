@@ -26,12 +26,8 @@ mixin _$Funcionarios {
   String get nome => throw _privateConstructorUsedError;
   String get profissao => throw _privateConstructorUsedError;
 
-  /// Serializes this Funcionarios to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Funcionarios
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $FuncionariosCopyWith<Funcionarios> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,8 +56,6 @@ class _$FuncionariosCopyWithImpl<$Res, $Val extends Funcionarios>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Funcionarios
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -120,8 +114,6 @@ class __$$FuncionariosImplCopyWithImpl<$Res>
       _$FuncionariosImpl _value, $Res Function(_$FuncionariosImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Funcionarios
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -199,14 +191,12 @@ class _$FuncionariosImpl implements _Funcionarios {
                 other.profissao == profissao));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, codFuncionario, cpf, email, nome, profissao);
 
-  /// Create a copy of Funcionarios
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FuncionariosImplCopyWith<_$FuncionariosImpl> get copyWith =>
@@ -241,11 +231,8 @@ abstract class _Funcionarios implements Funcionarios {
   String get nome;
   @override
   String get profissao;
-
-  /// Create a copy of Funcionarios
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FuncionariosImplCopyWith<_$FuncionariosImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

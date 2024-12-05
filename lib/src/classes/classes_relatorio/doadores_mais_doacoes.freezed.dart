@@ -25,12 +25,8 @@ mixin _$DoadoresMaisDoacoes {
   int get qtdRegistros => throw _privateConstructorUsedError;
   String get qtdMls => throw _privateConstructorUsedError;
 
-  /// Serializes this DoadoresMaisDoacoes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DoadoresMaisDoacoes
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DoadoresMaisDoacoesCopyWith<DoadoresMaisDoacoes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,8 +50,6 @@ class _$DoadoresMaisDoacoesCopyWithImpl<$Res, $Val extends DoadoresMaisDoacoes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DoadoresMaisDoacoes
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -104,8 +98,6 @@ class __$$DoadoresMaisDoacoesImplCopyWithImpl<$Res>
       $Res Function(_$DoadoresMaisDoacoesImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DoadoresMaisDoacoes
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -174,14 +166,12 @@ class _$DoadoresMaisDoacoesImpl implements _DoadoresMaisDoacoes {
             (identical(other.qtdMls, qtdMls) || other.qtdMls == qtdMls));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, nome, sobrenome, qtdRegistros, qtdMls);
 
-  /// Create a copy of DoadoresMaisDoacoes
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DoadoresMaisDoacoesImplCopyWith<_$DoadoresMaisDoacoesImpl> get copyWith =>
@@ -214,11 +204,8 @@ abstract class _DoadoresMaisDoacoes implements DoadoresMaisDoacoes {
   int get qtdRegistros;
   @override
   String get qtdMls;
-
-  /// Create a copy of DoadoresMaisDoacoes
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DoadoresMaisDoacoesImplCopyWith<_$DoadoresMaisDoacoesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

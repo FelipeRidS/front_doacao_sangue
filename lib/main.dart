@@ -4,6 +4,7 @@ import 'package:front_doacao_sangue/screens/menu/menu_screen.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mongo_dart/mongo_dart.dart';
 
+
 late final Dio dio;
 late final Db db;
 const baseUrl = "http://localhost:3000";
@@ -12,7 +13,7 @@ void main() async {
   dio = Dio();
   dio.options.headers['Content-Type'] = 'application/json';
   try {
-    db = await Db.create('mongodb+srv://admin:udesc@cluster0.5j2zf.mongodb.net/');
+    db = await Db.create('mongodb+srv://admin:udesc@cluster0.5j2zf.mongodb.net/SistemaDoacao?retryWrites=true&w=majority&appName=Cluster0');
   } catch (e, s) {
     print(e);
     print(s);
