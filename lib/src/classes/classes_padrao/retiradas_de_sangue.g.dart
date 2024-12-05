@@ -9,9 +9,9 @@ part of 'retiradas_de_sangue.dart';
 _$RetiradasDeSangueImpl _$$RetiradasDeSangueImplFromJson(
         Map<String, dynamic> json) =>
     _$RetiradasDeSangueImpl(
-      codRetiradaSangue: (json['codRetiradaSangue'] as num).toInt(),
-      codTipoSanguineo: (json['codTipoSanguineo'] as num).toInt(),
-      mlSangue: (json['mlSangue'] as num).toInt(),
+      codRetiradaSangue: (json['codRetiradaSangue'] as num?)?.toInt() ?? 0,
+      codTipoSanguineo: (json['codTipoSanguineo'] as num?)?.toInt() ?? 0,
+      mlSangue: (json['mlSangue'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$RetiradasDeSangueImplToJson(

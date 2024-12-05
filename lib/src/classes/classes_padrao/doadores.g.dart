@@ -8,13 +8,13 @@ part of 'doadores.dart';
 
 _$DoadoresImpl _$$DoadoresImplFromJson(Map<String, dynamic> json) =>
     _$DoadoresImpl(
-      codDoador: (json['codDoador'] as num).toInt(),
-      nome: json['nome'] as String,
-      sobrenome: json['sobrenome'] as String,
-      cpf: json['cpf'] as String?,
-      telefone: json['telefone'] as String,
-      codTipoSanguineo: (json['codTipoSanguineo'] as num).toInt(),
-      endereco: json['endereco'] as String,
+      codDoador: (json['codDoador'] as num?)?.toInt() ?? 0,
+      nome: json['nome'] as String? ?? '',
+      sobrenome: json['sobrenome'] as String? ?? '',
+      cpf: json['cpf'] as String? ?? '',
+      telefone: json['telefone'] as String? ?? '',
+      codTipoSanguineo: (json['codTipoSanguineo'] as num?)?.toInt() ?? 0,
+      endereco: json['endereco'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$DoadoresImplToJson(_$DoadoresImpl instance) =>

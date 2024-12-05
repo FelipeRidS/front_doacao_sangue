@@ -9,9 +9,9 @@ part of 'centros_doacao.dart';
 _$CentrosDeDoacaoImpl _$$CentrosDeDoacaoImplFromJson(
         Map<String, dynamic> json) =>
     _$CentrosDeDoacaoImpl(
-      codCentroDoacao: (json['codCentroDoacao'] as num).toInt(),
-      nomeLocal: json['nomeLocal'] as String,
-      endereco: json['endereco'] as String,
+      codCentroDoacao: (json['codCentroDoacao'] as num?)?.toInt() ?? 0,
+      nomeLocal: json['nomeLocal'] as String? ?? '',
+      endereco: json['endereco'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$CentrosDeDoacaoImplToJson(

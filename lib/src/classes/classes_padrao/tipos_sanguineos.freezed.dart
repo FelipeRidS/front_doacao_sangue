@@ -120,18 +120,21 @@ class __$$TiposSanguineosImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TiposSanguineosImpl implements _TiposSanguineos {
   const _$TiposSanguineosImpl(
-      {required this.codTipoSanguineo,
-      required this.nomeTipoSang,
-      required this.totalDisponivel});
+      {this.codTipoSanguineo = 0,
+      this.nomeTipoSang = '',
+      this.totalDisponivel = 0});
 
   factory _$TiposSanguineosImpl.fromJson(Map<String, dynamic> json) =>
       _$$TiposSanguineosImplFromJson(json);
 
   @override
+  @JsonKey()
   final int codTipoSanguineo;
   @override
+  @JsonKey()
   final String nomeTipoSang;
   @override
+  @JsonKey()
   final int totalDisponivel;
 
   @override
@@ -174,9 +177,9 @@ class _$TiposSanguineosImpl implements _TiposSanguineos {
 
 abstract class _TiposSanguineos implements TiposSanguineos {
   const factory _TiposSanguineos(
-      {required final int codTipoSanguineo,
-      required final String nomeTipoSang,
-      required final int totalDisponivel}) = _$TiposSanguineosImpl;
+      {final int codTipoSanguineo,
+      final String nomeTipoSang,
+      final int totalDisponivel}) = _$TiposSanguineosImpl;
 
   factory _TiposSanguineos.fromJson(Map<String, dynamic> json) =
       _$TiposSanguineosImpl.fromJson;

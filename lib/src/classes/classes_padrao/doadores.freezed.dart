@@ -177,30 +177,37 @@ class __$$DoadoresImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DoadoresImpl implements _Doadores {
   const _$DoadoresImpl(
-      {required this.codDoador,
-      required this.nome,
-      required this.sobrenome,
-      required this.cpf,
-      required this.telefone,
-      required this.codTipoSanguineo,
-      required this.endereco});
+      {this.codDoador = 0,
+      this.nome = '',
+      this.sobrenome = '',
+      this.cpf = '',
+      this.telefone = '',
+      this.codTipoSanguineo = 0,
+      this.endereco = ''});
 
   factory _$DoadoresImpl.fromJson(Map<String, dynamic> json) =>
       _$$DoadoresImplFromJson(json);
 
   @override
+  @JsonKey()
   final int codDoador;
   @override
+  @JsonKey()
   final String nome;
   @override
+  @JsonKey()
   final String sobrenome;
   @override
+  @JsonKey()
   final String? cpf;
   @override
+  @JsonKey()
   final String telefone;
   @override
+  @JsonKey()
   final int codTipoSanguineo;
   @override
+  @JsonKey()
   final String endereco;
 
   @override
@@ -248,13 +255,13 @@ class _$DoadoresImpl implements _Doadores {
 
 abstract class _Doadores implements Doadores {
   const factory _Doadores(
-      {required final int codDoador,
-      required final String nome,
-      required final String sobrenome,
-      required final String? cpf,
-      required final String telefone,
-      required final int codTipoSanguineo,
-      required final String endereco}) = _$DoadoresImpl;
+      {final int codDoador,
+      final String nome,
+      final String sobrenome,
+      final String? cpf,
+      final String telefone,
+      final int codTipoSanguineo,
+      final String endereco}) = _$DoadoresImpl;
 
   factory _Doadores.fromJson(Map<String, dynamic> json) =
       _$DoadoresImpl.fromJson;

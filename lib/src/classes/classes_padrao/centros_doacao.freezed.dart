@@ -120,18 +120,19 @@ class __$$CentrosDeDoacaoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CentrosDeDoacaoImpl implements _CentrosDeDoacao {
   const _$CentrosDeDoacaoImpl(
-      {required this.codCentroDoacao,
-      required this.nomeLocal,
-      required this.endereco});
+      {this.codCentroDoacao = 0, this.nomeLocal = '', this.endereco = ''});
 
   factory _$CentrosDeDoacaoImpl.fromJson(Map<String, dynamic> json) =>
       _$$CentrosDeDoacaoImplFromJson(json);
 
   @override
+  @JsonKey()
   final int codCentroDoacao;
   @override
+  @JsonKey()
   final String nomeLocal;
   @override
+  @JsonKey()
   final String endereco;
 
   @override
@@ -174,9 +175,9 @@ class _$CentrosDeDoacaoImpl implements _CentrosDeDoacao {
 
 abstract class _CentrosDeDoacao implements CentrosDeDoacao {
   const factory _CentrosDeDoacao(
-      {required final int codCentroDoacao,
-      required final String nomeLocal,
-      required final String endereco}) = _$CentrosDeDoacaoImpl;
+      {final int codCentroDoacao,
+      final String nomeLocal,
+      final String endereco}) = _$CentrosDeDoacaoImpl;
 
   factory _CentrosDeDoacao.fromJson(Map<String, dynamic> json) =
       _$CentrosDeDoacaoImpl.fromJson;

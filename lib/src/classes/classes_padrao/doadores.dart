@@ -5,13 +5,13 @@ part 'doadores.g.dart';
 @freezed
 class Doadores with _$Doadores {
   const factory Doadores({
-    required int codDoador,
-    required String nome,
-    required String sobrenome,
-    required String? cpf,
-    required String telefone,
-    required int codTipoSanguineo,
-    required String endereco,
+    @Default(0) int codDoador,
+    @Default('') String nome,
+    @Default('') String sobrenome,
+    @Default('') String? cpf,
+    @Default('') String telefone,
+    @Default(0) int codTipoSanguineo,
+    @Default('') String endereco,
   }) = _Doadores;
 
   factory Doadores.fromJson(Map<String, dynamic> json) =>

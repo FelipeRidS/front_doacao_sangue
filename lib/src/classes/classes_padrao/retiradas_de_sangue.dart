@@ -5,9 +5,9 @@ part 'retiradas_de_sangue.g.dart';
 @freezed
 class RetiradasDeSangue with _$RetiradasDeSangue {
   const factory RetiradasDeSangue({
-    required int codRetiradaSangue,
-    required int codTipoSanguineo,
-    required int mlSangue,
+    @Default(0) int codRetiradaSangue,
+    @Default(0) int codTipoSanguineo,
+    @Default(0) int mlSangue,
   }) = _RetiradasDeSangue;
 
   factory RetiradasDeSangue.fromJson(Map<String, dynamic> json) =>

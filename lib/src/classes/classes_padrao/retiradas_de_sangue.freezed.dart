@@ -120,18 +120,21 @@ class __$$RetiradasDeSangueImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RetiradasDeSangueImpl implements _RetiradasDeSangue {
   const _$RetiradasDeSangueImpl(
-      {required this.codRetiradaSangue,
-      required this.codTipoSanguineo,
-      required this.mlSangue});
+      {this.codRetiradaSangue = 0,
+      this.codTipoSanguineo = 0,
+      this.mlSangue = 0});
 
   factory _$RetiradasDeSangueImpl.fromJson(Map<String, dynamic> json) =>
       _$$RetiradasDeSangueImplFromJson(json);
 
   @override
+  @JsonKey()
   final int codRetiradaSangue;
   @override
+  @JsonKey()
   final int codTipoSanguineo;
   @override
+  @JsonKey()
   final int mlSangue;
 
   @override
@@ -174,9 +177,9 @@ class _$RetiradasDeSangueImpl implements _RetiradasDeSangue {
 
 abstract class _RetiradasDeSangue implements RetiradasDeSangue {
   const factory _RetiradasDeSangue(
-      {required final int codRetiradaSangue,
-      required final int codTipoSanguineo,
-      required final int mlSangue}) = _$RetiradasDeSangueImpl;
+      {final int codRetiradaSangue,
+      final int codTipoSanguineo,
+      final int mlSangue}) = _$RetiradasDeSangueImpl;
 
   factory _RetiradasDeSangue.fromJson(Map<String, dynamic> json) =
       _$RetiradasDeSangueImpl.fromJson;

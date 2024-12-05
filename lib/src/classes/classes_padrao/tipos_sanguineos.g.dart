@@ -9,9 +9,9 @@ part of 'tipos_sanguineos.dart';
 _$TiposSanguineosImpl _$$TiposSanguineosImplFromJson(
         Map<String, dynamic> json) =>
     _$TiposSanguineosImpl(
-      codTipoSanguineo: (json['codTipoSanguineo'] as num).toInt(),
-      nomeTipoSang: json['nomeTipoSang'] as String,
-      totalDisponivel: (json['totalDisponivel'] as num).toInt(),
+      codTipoSanguineo: (json['codTipoSanguineo'] as num?)?.toInt() ?? 0,
+      nomeTipoSang: json['nomeTipoSang'] as String? ?? '',
+      totalDisponivel: (json['totalDisponivel'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$TiposSanguineosImplToJson(

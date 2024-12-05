@@ -152,24 +152,29 @@ class __$$FuncionariosImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FuncionariosImpl implements _Funcionarios {
   const _$FuncionariosImpl(
-      {required this.codFuncionario,
-      required this.cpf,
-      required this.email,
-      required this.nome,
-      required this.profissao});
+      {this.codFuncionario = 0,
+      this.cpf = '',
+      this.email = '',
+      this.nome = '',
+      this.profissao = ''});
 
   factory _$FuncionariosImpl.fromJson(Map<String, dynamic> json) =>
       _$$FuncionariosImplFromJson(json);
 
   @override
+  @JsonKey()
   final int codFuncionario;
   @override
+  @JsonKey()
   final String cpf;
   @override
+  @JsonKey()
   final String email;
   @override
+  @JsonKey()
   final String nome;
   @override
+  @JsonKey()
   final String profissao;
 
   @override
@@ -212,11 +217,11 @@ class _$FuncionariosImpl implements _Funcionarios {
 
 abstract class _Funcionarios implements Funcionarios {
   const factory _Funcionarios(
-      {required final int codFuncionario,
-      required final String cpf,
-      required final String email,
-      required final String nome,
-      required final String profissao}) = _$FuncionariosImpl;
+      {final int codFuncionario,
+      final String cpf,
+      final String email,
+      final String nome,
+      final String profissao}) = _$FuncionariosImpl;
 
   factory _Funcionarios.fromJson(Map<String, dynamic> json) =
       _$FuncionariosImpl.fromJson;
