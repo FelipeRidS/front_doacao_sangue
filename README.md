@@ -1,16 +1,16 @@
-# front_doacao_sangue
+### Instruções de compilação e execução do Banco de Sangue
 
-A new Flutter project.
+- Instale o Dart e o Flutter  
+  Certifique-se de que o Dart e o Flutter estão corretamente instalados em seu ambiente de
+desenvolvimento. Para verificar se a instalação foi realizada com sucesso, execute o
+comando flutter --version no terminal. Caso ainda não tenha o Flutter instalado, siga
+as instruções oficiais de instalação.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Acesse a Raiz do Projeto  
+  Abra o terminal e navegue até o diretório raiz do seu projeto Flutter.
+  
+- Execute a Aplicação  
+  No terminal, execute o seguinte comando para rodar a aplicação no ambiente Windows:
+flutter run -d windows
+Esse comando irá iniciar a execução da aplicação Flutter em uma janela do Windows,
+permitindo testar e depurar diretamente no sistema operacional.
